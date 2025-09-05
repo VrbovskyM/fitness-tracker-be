@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Logs;
+use App\Livewire\Users;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -22,3 +24,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/logs', Logs::class)->name('logs');
+Route::get('/users', Users::class)->name('users');
